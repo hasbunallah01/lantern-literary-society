@@ -3,9 +3,27 @@ import { Facebook, Mail } from "lucide-react";
 /**
  * About-page social/contact block.
  * - Social icon row: Facebook + Email (the only two social channels)
- * - Contact email list: hello@ / press@ / contact@
+ * - Contact email list: Email (general inbox) / Press / Contact
+ *
+ * Each email card renders a small Mail icon next to the address so the
+ * "mailto:" affordance reads at a glance (matches the footer pattern).
  */
 export function AboutSocial() {
+  const emails = [
+    {
+      label: "Email",
+      address: "lanternliterarysociety@gmail.com",
+    },
+    {
+      label: "Press",
+      address: "press@lanternliterarysociety.haybee.xyz",
+    },
+    {
+      label: "Contact",
+      address: "contact@lanternliterarysociety.haybee.xyz",
+    },
+  ];
+
   return (
     <section className="section bg-white">
       <div className="container-narrow">
@@ -42,39 +60,23 @@ export function AboutSocial() {
 
         {/* Contact email list */}
         <ul className="mx-auto mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">
-          <li className="card-light flex flex-col items-center gap-1 p-5 text-center">
-            <span className="font-display text-[12px] font-medium uppercase tracking-[0.22em] text-bronze">
-              Email
-            </span>
-            <a
-              href="mailto:hello@lanternliterarysociety.haybee.xyz"
-              className="break-all text-sm font-medium text-charcoal transition-colors hover:text-bronze"
+          {emails.map((item) => (
+            <li
+              key={item.label}
+              className="card-light flex flex-col items-center gap-2 p-5 text-center"
             >
-              hello@lanternliterarysociety.haybee.xyz
-            </a>
-          </li>
-          <li className="card-light flex flex-col items-center gap-1 p-5 text-center">
-            <span className="font-display text-[12px] font-medium uppercase tracking-[0.22em] text-bronze">
-              Press
-            </span>
-            <a
-              href="mailto:hello@lanternliterarysociety.haybee.xyz"
-              className="break-all text-sm font-medium text-charcoal transition-colors hover:text-bronze"
-            >
-              hello@lanternliterarysociety.haybee.xyz
-            </a>
-          </li>
-          <li className="card-light flex flex-col items-center gap-1 p-5 text-center">
-            <span className="font-display text-[12px] font-medium uppercase tracking-[0.22em] text-bronze">
-              Contact
-            </span>
-            <a
-              href="mailto:hello@lanternliterarysociety.haybee.xyz"
-              className="break-all text-sm font-medium text-charcoal transition-colors hover:text-bronze"
-            >
-              hello@lanternliterarysociety.haybee.xyz
-            </a>
-          </li>
+              <span className="font-display text-[12px] font-medium uppercase tracking-[0.22em] text-bronze">
+                {item.label}
+              </span>
+              <a
+                href={`mailto:${item.address}`}
+                className="inline-flex items-center gap-1.5 break-all text-sm font-medium text-charcoal transition-colors hover:text-bronze"
+              >
+                <Mail className="h-3.5 w-3.5 shrink-0 text-bronze" />
+                <span>{item.address}</span>
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

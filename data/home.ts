@@ -410,7 +410,7 @@ export const ctaBanner = {
   title: "Share Your Story. Inspire the World.",
   description:
     "Join The Lantern Literary Society and connect with readers through the power of live conversation.",
-  primaryCta: { label: "Submit Your Story", href: "https://form.jotform.com/261917650330050" },
+  primaryCta: { label: "Submit Your Story", href: "mailto:submissions@lanternliterarysociety.haybee.xyz" },
   secondaryCta: { label: "Learn More", href: "/about" },
   image:
     "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=80",

@@ -18,8 +18,8 @@ export const contactCards = [
   {
     icon: "megaphone",
     title: "Press & partnerships",
-    body: "hello@lanternliterarysociety.haybee.xyz",
-    href: "mailto:hello@lanternliterarysociety.haybee.xyz",
+    body: "press@lanternliterarysociety.haybee.xyz",
+    href: "mailto:press@lanternliterarysociety.haybee.xyz",
   },
 ] as const;
 

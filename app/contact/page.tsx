@@ -13,7 +13,7 @@ const socialLinks = [
   {
     icon: Facebook,
     label: "Facebook",
-    handle: "@thebookcrew",
+    handle: "@lanternliterarysociety",
     href: "https://www.facebook.com/share/19eVypEHkd/",
   },
   {

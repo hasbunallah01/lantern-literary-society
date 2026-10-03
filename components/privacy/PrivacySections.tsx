@@ -18,7 +18,7 @@ import {
 
 export function PrivacyHero() {
   return (
-    <section className="bg-ivory px-6 pb-16 pt-28 md:px-10 md:pb-24 md:pt-36">
+    <section className="bg-ivory px-5 pb-12 pt-20 md:px-10 md:pb-24 md:pt-36">
       <div className="container-wide grid items-center gap-12 md:grid-cols-2">
         <div>
           <motion.p
@@ -252,7 +252,7 @@ export function IPAndSecurity() {
 
 export function PrivacyCTA() {
   return (
-    <section className="px-6 pb-16 md:px-10 md:pb-24">
+    <section className="px-5 pb-12 md:px-10 md:pb-24">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

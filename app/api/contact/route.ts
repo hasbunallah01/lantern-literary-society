@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { z } from "zod";
+import { site } from "@/data/site";
 
 export const runtime = "nodejs";
 
@@ -12,7 +13,7 @@ const schema = z.object({
 });
 
 const FROM_ADDRESS = "The Lantern Literary Society <hello@lanternliterarysociety.haybee.xyz>";
-const TO_ADDRESS = "the.book.crew.community@gmail.com";
+const TO_ADDRESS = "lanternliterarysociety@gmail.com";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -87,7 +88,7 @@ export async function POST(request: Request) {
       <p>If your enquiry requires a response, we'll get back to you shortly.</p>
       <p>We appreciate your interest in The Lantern Literary Society.</p>
       <p>Kind regards,<br />The Lantern Literary Society</p>
-      <p><a href="https://thebookcrew.online">https://thebookcrew.online</a></p>
+      <p><a href={site.url}>{site.url}</a></p>
     </div>
   `;
 

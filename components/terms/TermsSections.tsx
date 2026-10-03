@@ -6,12 +6,13 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import { iconMap } from "@/components/home/IconMap";
 import { termsHero, termsSections, termsCta, type TermItem } from "@/data/terms";
+import { linkifyEmails } from "@/lib/utils";
 
 /* ---------- Hero ---------- */
 
 export function TermsHero() {
   return (
-    <section className="bg-ivory px-6 pb-16 pt-28 md:px-10 md:pb-24 md:pt-36">
+    <section className="bg-ivory px-5 pb-12 pt-20 md:px-10 md:pb-24 md:pt-36">
       <div className="container-wide grid items-center gap-12 md:grid-cols-2">
         <div>
           <motion.p
@@ -93,9 +94,10 @@ function TermCard({ item, index }: { item: TermItem; index: number }) {
         <h3 className="mt-0.5 font-display text-lg font-semibold leading-snug">
           {item.title}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-charcoal/70">
-          {item.description}
-        </p>
+        <p
+          className="mt-2 text-sm leading-relaxed text-charcoal/70"
+          dangerouslySetInnerHTML={{ __html: linkifyEmails(item.description) }}
+        />
         {item.points && (
           <ul className="mt-3 space-y-1.5">
             {item.points.map((point) => (
@@ -136,7 +138,7 @@ export function TermsSections() {
 
 export function TermsCTA() {
   return (
-    <section className="px-6 pb-16 md:px-10 md:pb-24">
+    <section className="px-5 pb-12 md:px-10 md:pb-24">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

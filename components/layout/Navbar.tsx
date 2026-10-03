@@ -74,9 +74,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://form.jotform.com/261917650330050"
-              target="_blank"
-              rel="noreferrer noopener"
+              href="mailto:submissions@lanternliterarysociety.haybee.xyz"
               className="btn-forest hidden !py-2.5 lg:inline-flex"
             >
               Submit Your Story
@@ -132,9 +130,7 @@ export function Navbar() {
                 className="pt-6"
               >
                 <a
-                  href="https://form.jotform.com/261917650330050"
-                  target="_blank"
-                  rel="noreferrer noopener"
+                  href="mailto:submissions@lanternliterarysociety.haybee.xyz"
                   className="btn-forest w-full"
                 >
                   Submit Your Story
