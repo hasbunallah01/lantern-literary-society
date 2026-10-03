@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with The Book Crew Readers Community.",
+  description: "Get in touch with The Lantern Literary Society.",
 };
 
 const socialLinks = [

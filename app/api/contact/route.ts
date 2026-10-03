@@ -11,7 +11,7 @@ const schema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
-const FROM_ADDRESS = "The Book Crew Readers Community <noreply@thebookcrew.online>";
+const FROM_ADDRESS = "The Lantern Literary Society <noreply@thebookcrew.online>";
 const TO_ADDRESS = "the.book.crew.community@gmail.com";
 
 export async function POST(request: Request) {
@@ -82,11 +82,11 @@ export async function POST(request: Request) {
   const visitorHtml = `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #111;">
       <p>Hello ${escapeHtml(firstName)},</p>
-      <p>Thank you for contacting The Book Crew Readers Community.</p>
+      <p>Thank you for contacting The Lantern Literary Society.</p>
       <p>We've successfully received your message and our team will review it as soon as possible.</p>
       <p>If your enquiry requires a response, we'll get back to you shortly.</p>
-      <p>We appreciate your interest in The Book Crew Readers Community.</p>
-      <p>Kind regards,<br />The Book Crew Readers Community</p>
+      <p>We appreciate your interest in The Lantern Literary Society.</p>
+      <p>Kind regards,<br />The Lantern Literary Society</p>
       <p><a href="https://thebookcrew.online">https://thebookcrew.online</a></p>
     </div>
   `;
@@ -103,7 +103,7 @@ export async function POST(request: Request) {
       resend.emails.send({
         from: FROM_ADDRESS,
         to: email,
-        subject: "We've received your message — The Book Crew Readers Community",
+        subject: "We've received your message — The Lantern Literary Society",
         html: visitorHtml,
       }),
     ]);

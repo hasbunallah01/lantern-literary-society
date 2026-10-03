@@ -8,7 +8,7 @@ interface LogoProps {
 }
 
 /**
- * The Book Crew Readers Community logo.
+ * The Lantern Literary Society logo.
  * Uses the brand image asset; variant only controls a subtle background
  * ring around the badge in the light/dark contexts.
  */
@@ -17,7 +17,7 @@ export function Logo({ variant = "dark", className }: LogoProps) {
   return (
     <Link
       href="/"
-      aria-label="The Book Crew Readers Community — Home"
+      aria-label="The Lantern Literary Society — Home"
       className={cn("group inline-flex items-center gap-2.5", className)}
     >
       <span
@@ -29,11 +29,11 @@ export function Logo({ variant = "dark", className }: LogoProps) {
         )}
       >
         <Image
-          src="/bookcrew-logo.webp"
-          alt="The Book Crew Readers Community"
+          src="/lantern-logo.webp"
+          alt="The Lantern Literary Society"
           fill
           sizes="44px"
-          className="object-cover"
+          className="object-cover scale-90"
           priority
         />
       </span>
@@ -44,7 +44,7 @@ export function Logo({ variant = "dark", className }: LogoProps) {
             isLight ? "text-white" : "text-forest",
           )}
         >
-          THE BOOK CREW
+          THE LANTERN
         </span>
         <span
           className={cn(
@@ -52,7 +52,7 @@ export function Logo({ variant = "dark", className }: LogoProps) {
             isLight ? "text-white/70" : "text-bronze",
           )}
         >
-          Readers Community
+          Literary Society
         </span>
       </span>
     </Link>

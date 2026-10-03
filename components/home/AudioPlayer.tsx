@@ -123,7 +123,7 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
             onChange={(e) => seek(Number(e.target.value))}
             className="audio-range w-full"
             style={{
-              background: `linear-gradient(to right, #04163C ${pct}%, #E7E4DD ${pct}%)`,
+              background: `linear-gradient(to right, #082137 ${pct}%, #E8E2D3 ${pct}%)`,
             }}
           />
           <div className="mt-1 flex justify-between text-xs tabular-nums text-charcoal/60">

@@ -12,7 +12,7 @@ import { commitment, privacyPolicy, communityStandards } from "@/data/privacy";
 export const metadata: Metadata = {
   title: "Privacy & Guidelines",
   description:
-    "How The Book Crew Readers Community protects your information, works with authors, and maintains a professional, respectful, and secure platform — our commitment, privacy policy, community standards, and terms of participation.",
+    "How The Lantern Literary Society protects your information, works with authors, and maintains a professional, respectful, and secure platform — our commitment, privacy policy, community standards, and terms of participation.",
 };
 
 export default function PrivacyPage() {

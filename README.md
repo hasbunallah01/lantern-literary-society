@@ -1,13 +1,13 @@
-# The Book Crew Readers Community
+# The Lantern Literary Society
 
-A premium editorial-quality website for The Book Crew Readers Community — a home for storytellers.
+A premium editorial-quality website for The Lantern Literary Society — a book committee and reading community.
 
 Built with **Next.js 15 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and **Lucide Icons**.
 
 ## ✨ Highlights
 
 - Cinematic full-screen hero with parallax + animated text reveal
-- Premium dark theme (ink black + copper accent)
+- Light cream theme with navy and gold accents
 - Glassmorphism cards, soft shadows, gradient overlays
 - Sticky transparent → solid navigation with mobile slide-out menu
 - Featured Author, Featured Books, Awards, Community Stats, Testimonials
@@ -64,7 +64,7 @@ The fastest path:
 
 1. Push the repo to GitHub (already done in this repo).
 2. Go to [vercel.com/new](https://vercel.com/new).
-3. Import this repository (`hasbunallah01/thebookcrew`).
+3. Import this repository (`hasbunallah01/lantern-literary-society`).
 4. Vercel auto-detects Next.js — leave the defaults.
 5. Click **Deploy**. Done.
 
@@ -114,4 +114,4 @@ The home page picks it up automatically.
 
 ## 📜 License
 
-© The Book Crew Readers Community. All rights reserved.
+© The Lantern Literary Society. All rights reserved.

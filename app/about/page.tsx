@@ -27,7 +27,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The story, mission, values, and standards behind The Book Crew Readers Community — a premium media platform connecting authors and readers through live conversations and editorial storytelling.",
+    "The story, mission, values, and standards behind The Lantern Literary Society — a premium media platform connecting authors and readers through live conversations and editorial storytelling.",
 };
 
 export default function AboutPage() {
@@ -72,7 +72,7 @@ export default function AboutPage() {
       {/* 14. Behind the Spotlight */}
       <SpotlightGallery />
 
-      {/* 15. Why Authors Choose The Book Crew */}
+      {/* 15. Why Authors Choose The Lantern */}
       <ValueGrid {...whyChooseUs} columns={3} background="ivory" />
 
       {/* 16. Social / contact */}

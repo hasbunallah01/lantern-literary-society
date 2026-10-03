@@ -4,10 +4,10 @@
  */
 
 export const hero = {
-  eyebrow: "Live Conversations. Real Stories. Lasting Impact.",
+  eyebrow: "Read. Discuss. Discover. Connect.",
   title: "Where Authors Are Heard and Readers Connect",
   description:
-    "The Book Crew Readers Community brings powerful stories to life through live interviews, visual storytelling, and meaningful connection.",
+    "The Lantern Literary Society is a book committee and reading community bringing authors and readers together through live conversation.",
   primaryCta: { label: "Join Our Community", href: "/contact" },
   secondaryCta: { label: "View Us Live", href: "https://youtube.com/@thebookcrew" },
   image: "",
@@ -29,7 +29,7 @@ export const communityAvatars = [
 ] as const;
 
 export const whyBookCrew = {
-  title: "Why The Book Crew",
+  title: "Why The Lantern",
   image:
     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1000&q=80",
   imageAlt: "Books arranged on a sunlit desk beside a plant",
@@ -361,7 +361,7 @@ export const whyAuthorsChooseUs = [
 export const testimonials = [
   {
     quote:
-      "The Book Crew Readers Community helped me reach thousands of new readers. The interview was such a beautiful experience!",
+      "The Lantern Literary Society helped me reach thousands of new readers. The interview was such a beautiful experience!",
     name: "Claire Bennett",
     role: "Bestselling Author",
     avatar:
@@ -409,7 +409,7 @@ export const faqImage = {
 export const ctaBanner = {
   title: "Share Your Story. Inspire the World.",
   description:
-    "Join The Book Crew Readers Community and connect with readers through the power of live conversation.",
+    "Join The Lantern Literary Society and connect with readers through the power of live conversation.",
   primaryCta: { label: "Submit Your Story", href: "https://form.jotform.com/261917650330050" },
   secondaryCta: { label: "Learn More", href: "/about" },
   image:

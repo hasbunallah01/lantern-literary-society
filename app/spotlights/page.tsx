@@ -7,7 +7,7 @@ import {
 export const metadata: Metadata = {
   title: "Featured Spotlights",
   description:
-    "Discover featured authors on The Book Crew Readers Community — including bestselling psychological thriller author Alison James and The Good Neighbour — with full profiles, stories, and links to explore each book.",
+    "Discover featured authors on The Lantern Literary Society — including bestselling psychological thriller author Alison James and The Good Neighbour — with full profiles, stories, and links to explore each book.",
 };
 
 export default function SpotlightsPage() {

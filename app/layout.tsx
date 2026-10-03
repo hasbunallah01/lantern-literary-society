@@ -21,18 +21,18 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "The Book Crew Community",
-    template: `%s | The Book Crew Community`,
+    default: "The Lantern Literary Society",
+    template: `%s | The Lantern Literary Society`,
   },
   description:
-    "A community for readers and authors who believe every story deserves to be heard.",
+    "A book committee and reading community. Read, discuss, discover and connect.",
   keywords: [
-    "literary media",
+    "literary society",
+    "book committee",
+    "reading community",
+    "book club",
+    "The Lantern Literary Society",
     "author interviews",
-    "book features",
-    "storytellers",
-    "The Book Crew",
-    "publishing",
   ],
   authors: [{ name: site.name }],
   creator: site.name,
@@ -41,37 +41,37 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon-v2.ico", sizes: "any" },
-      { url: "/favicon-32x32-v2.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16-v2.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-v3.ico", sizes: "any" },
+      { url: "/favicon-32x32-v3.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16-v3.png", sizes: "16x16", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-touch-icon-v2.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon-v3.png", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: site.url,
-    title: "The Book Crew Community",
+    title: "The Lantern Literary Society",
     description:
-      "A community for readers and authors who believe every story deserves to be heard.",
+      "A book committee and reading community. Read, discuss, discover and connect.",
     siteName: site.name,
     images: [
       {
-        url: "/wide_clean_professional_graphic_banner_social.png",
-        width: 1733,
-        height: 907,
-        alt: "The Book Crew Community — Real Readers, Great Books, Stronger Together",
+        url: "/og-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "The Lantern Literary Society — Read, Discuss, Discover, Connect",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Book Crew Community",
+    title: "The Lantern Literary Society",
     description:
-      "A community for readers and authors who believe every story deserves to be heard.",
-    images: ["/wide_clean_professional_graphic_banner_social.png"],
+      "A book committee and reading community. Read, discuss, discover and connect.",
+    images: ["/og-banner.png"],
   },
   robots: { index: true, follow: true },
 };

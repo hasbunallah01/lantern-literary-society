@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --background: 250 247 242; /* Warm Ivory */
-    --foreground: 4 22 60; /* Brand Navy */
-    --forest: 4 22 60;
-    --bronze: 233 101 3;
+    --background: 251 247 238; /* Warm Ivory */
+    --foreground: 8 33 55; /* Brand Navy */
+    --forest: 8 33 55;
+    --bronze: 203 146 34;
   }
 
   * {
@@ -217,5 +217,5 @@
 }
 
 .audio-range:focus-visible {
-  box-shadow: 0 0 0 3px rgba(4, 22, 60, 0.25);
+  box-shadow: 0 0 0 3px rgba(8, 33, 55, 0.25);
 }

@@ -1,9 +1,9 @@
 export const site = {
-  name: "The Book Crew Readers Community",
-  shortName: "The Book Crew",
-  tagline: "A Home for Storytellers",
+  name: "The Lantern Literary Society",
+  shortName: "The Lantern",
+  tagline: "Book Committee & Reading Community",
   description:
-    "The Book Crew Readers Community brings powerful stories to life through live interviews, visual storytelling, and meaningful connection between authors and readers.",
+    "The Lantern Literary Society is a book committee and reading community where members read, discuss, discover and connect through live conversations and shared stories.",
   url: "https://thebookcrew.online",
   email: "contact@thebookcrew.online",
   phone: "",

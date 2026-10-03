@@ -5,7 +5,7 @@ export const privacyHero = {
   titleLead: "Built on Trust.",
   titleAccent: "Guided by Respect.",
   description:
-    "Every meaningful partnership begins with trust. These policies explain how The Book Crew Readers Community protects your information, works with authors, and maintains a professional, respectful, and secure platform for our growing community.",
+    "Every meaningful partnership begins with trust. These policies explain how The Lantern Literary Society protects your information, works with authors, and maintains a professional, respectful, and secure platform for our growing community.",
   cta: { label: "Contact Us", href: "/contact" },
   image:
     "https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?auto=format&fit=crop&w=1400&q=80",
@@ -72,7 +72,7 @@ export const privacyPolicy = {
       icon: "clapperboard",
       title: "Media Usage",
       description:
-        "Photos, recordings, and live conversations are used only for promotional purposes related to The Book Crew Readers Community.",
+        "Photos, recordings, and live conversations are used only for promotional purposes related to The Lantern Literary Society.",
     },
     {
       icon: "badge-check",
@@ -154,7 +154,7 @@ export const intellectualProperty = {
   eyebrow: "Intellectual Property",
   title: "Your work stays yours.",
   description:
-    "Authors retain full ownership of all original work. By submitting, you grant The Book Crew Readers Community a non-exclusive promotional license to use your materials for live author spotlights, features, and related media — nothing more.",
+    "Authors retain full ownership of all original work. By submitting, you grant The Lantern Literary Society a non-exclusive promotional license to use your materials for live author spotlights, features, and related media — nothing more.",
 } as const;
 
 export const securityTrust = {
@@ -163,8 +163,8 @@ export const securityTrust = {
   title: "Staying safe with us.",
   points: [
     "Your information is stored securely.",
-    "We communicate only through official The Book Crew Readers Community channels.",
-    "Never send payments outside official The Book Crew Readers Community channels.",
+    "We communicate only through official The Lantern Literary Society channels.",
+    "Never send payments outside official The Lantern Literary Society channels.",
     "Beware of impersonators — when in doubt, verify with our team.",
   ],
 } as const;

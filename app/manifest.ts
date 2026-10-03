@@ -2,17 +2,17 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "The Book Crew Readers Community",
-    short_name: "The Book Crew",
+    name: "The Lantern Literary Society",
+    short_name: "The Lantern",
     description:
-      "A premium media platform connecting authors and readers through live conversations and editorial storytelling.",
+      "A book committee and reading community. Read, discuss, discover and connect.",
     start_url: "/",
     display: "standalone",
-    background_color: "#FAF7F2",
-    theme_color: "#04163C",
+    background_color: "#FBF7EE",
+    theme_color: "#082137",
     icons: [
-      { src: "/icon-192-v2.png", sizes: "192x192", type: "image/png" },
-      { src: "/icon-512-v2.png", sizes: "512x512", type: "image/png" },
+      { src: "/icon-192-v3.png", sizes: "192x192", type: "image/png" },
+      { src: "/icon-512-v3.png", sizes: "512x512", type: "image/png" },
     ],
   };
 }
