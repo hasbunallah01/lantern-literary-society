@@ -29,7 +29,7 @@ function SpotlightCard({ item }: { item: Spotlight }) {
     <div className="p-4 pt-6 sm:p-6 md:p-8">
       {/* Banner with overlapping author photo */}
       <div className="relative">
-        <div className="relative aspect-[16/7] overflow-hidden rounded-xl sm:aspect-[16/6]">
+        <div className="relative aspect-[16/7] overflow-hidden rounded-sm sm:aspect-[16/6]">
           <Image
             src={item.banner}
             alt={item.bannerAlt}

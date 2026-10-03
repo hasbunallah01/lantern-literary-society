@@ -15,7 +15,7 @@ export function CTABanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="grid overflow-hidden rounded-2xl bg-forest md:grid-cols-5"
+          className="grid overflow-hidden rounded-sm bg-forest md:grid-cols-5"
         >
           {/* Copy */}
           <div className="p-10 text-white md:col-span-3 md:p-14">

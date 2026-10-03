@@ -19,7 +19,7 @@ export function WhyBookCrew() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-card md:col-span-5 lg:col-span-4"
+          className="relative aspect-[4/3] w-full overflow-hidden rounded-sm shadow-card md:col-span-5 lg:col-span-4"
         >
           <Image
             src={whyBookCrew.image}

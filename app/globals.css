@@ -70,7 +70,7 @@
   }
 
   .card-light {
-    @apply rounded-xl border border-mist bg-white shadow-card transition-shadow duration-300;
+    @apply rounded-sm border border-mist border-t-2 border-t-bronze bg-white shadow-card transition-shadow duration-300;
   }
 
   /* ===== Legacy dark-theme helpers (About/Contact until redesigned) ===== */
