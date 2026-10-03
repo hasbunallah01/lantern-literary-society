@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   BookOpen,
@@ -12,6 +13,7 @@ import {
   UserRound,
 } from "lucide-react";
 import { spotlights, type Spotlight } from "@/data/home";
+import { spotlightSlug } from "@/lib/share";
 
 /** Page header in the shared editorial style. */
 export function SpotlightsHero() {
@@ -53,7 +55,7 @@ export function SpotlightsHero() {
  * complete author page: same banner, avatar, identity, metadata, and
  * buttons, plus About the Book and About the Author.
  */
-function SpotlightProfile({ item }: { item: Spotlight }) {
+export function SpotlightProfile({ item }: { item: Spotlight }) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -94,7 +96,9 @@ function SpotlightProfile({ item }: { item: Spotlight }) {
         {/* Identity */}
         <div className="mt-14 text-center md:mt-4 md:pl-44 md:text-left">
           <h2 className="font-display text-2xl font-bold text-forest md:text-3xl">
-            {item.authorName}
+            <Link href={`/spotlights/${spotlightSlug(item)}`} className="hover:underline" title="Open this spotlight's shareable page">
+              {item.authorName}
+            </Link>
           </h2>
           <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-charcoal/70">
             <span aria-hidden className="text-bronze">✒</span>

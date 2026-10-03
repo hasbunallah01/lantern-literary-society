@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ConversationCard } from "@/components/home/FeaturedConversation";
 import { conversations } from "@/data/conversations";
@@ -51,9 +52,13 @@ export function ConversationArchive() {
       <div className="container-narrow space-y-8">
         {conversations.map((conversation, i) => (
           <div key={conversation.id} className="relative">
-            <span className="eyebrow mb-3 block text-center sm:text-left">
-              Conversation #{i + 1}
-            </span>
+            <Link
+              href={`/conversations/${conversation.id}`}
+              className="eyebrow mb-3 block text-center hover:underline sm:text-left"
+              title="Open this conversation's shareable page"
+            >
+              Conversation #{i + 1} ↗
+            </Link>
             <ConversationCard conversation={conversation} />
           </div>
         ))}
