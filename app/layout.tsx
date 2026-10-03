@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [
       {
-        url: "/og-banner.png",
+        url: "/og-banner.jpg",
         width: 1200,
         height: 630,
         alt: "The Lantern Literary Society — Read, Discuss, Discover, Connect",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "The Lantern Literary Society",
     description:
       "A book committee and reading community. Read, discuss, discover and connect.",
-    images: ["/og-banner.png"],
+    images: ["/og-banner.jpg"],
   },
   robots: { index: true, follow: true },
 };
