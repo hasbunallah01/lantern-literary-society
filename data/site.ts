@@ -4,8 +4,12 @@ export const site = {
   tagline: "Book Committee & Reading Community",
   description:
     "The Lantern Literary Society is a book committee and reading community where members read, discuss, discover and connect through live conversations and shared stories.",
-  url: "https://thebookcrew.online",
-  email: "contact@thebookcrew.online",
+  // Canonical site URL. Used for OG metadata base + canonical links.
+  // Override with NEXT_PUBLIC_SITE_URL at build time (and runtime for client).
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+    "https://lantern-literary-society.vercel.app",
+  email: "contact@lanternliterarysociety.com",
   phone: "",
   address: "",
   hours: "Mon – Fri · 9:00 – 18:00 (UTC)",
