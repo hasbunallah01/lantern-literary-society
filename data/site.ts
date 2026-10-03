@@ -8,7 +8,7 @@ export const site = {
   // Override with NEXT_PUBLIC_SITE_URL at build time (and runtime for client).
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-    "https://lantern-literary-society.vercel.app",
+    "https://lanternliterarysociety.haybee.xyz",
   email: "hello@lanternliterarysociety.haybee.xyz",
   phone: "",
   address: "",

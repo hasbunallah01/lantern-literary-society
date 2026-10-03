@@ -18,15 +18,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${c.authorName}: ${c.conversationTitle}`;
   const description = excerpt(c.conversationDescription, 200);
   const url = `/conversations/${c.id}`;
+  const images = [{ url: `/og/conversations/${c.id}.jpg`, width: 1200, height: 630, type: "image/jpeg", alt: `${c.authorName} — Live Conversation` }];
   return {
     title: { absolute: `${title} | The Lantern Literary Society` },
     description,
     alternates: { canonical: url },
     openGraph: {
-      type: "article", url, title, description, siteName: "The Lantern Literary Society",
+      type: "article", url, title, description, siteName: "The Lantern Literary Society", images,
       ...(c.publishDate ? { publishedTime: c.publishDate } : {}),
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images },
   };
 }
 

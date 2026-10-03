@@ -70,3 +70,13 @@ export async function renderShareImage(c: Card) {
     OG_SIZE
   );
 }
+
+/** Same card, delivered as a compact JPEG (WhatsApp and others drop preview images over ~300 KB). */
+export async function renderShareJpeg(c: Card) {
+  const res = renderShareImage(c);
+  const png = Buffer.from(new Uint8Array(await (await res).arrayBuffer()));
+  const jpg = await sharp(png).flatten({ background: "#082137" }).jpeg({ quality: 80, mozjpeg: true }).toBuffer();
+  return new Response(new Uint8Array(jpg), {
+    headers: { "Content-Type": "image/jpeg", "Cache-Control": "public, max-age=31536000, immutable" },
+  });
+}
