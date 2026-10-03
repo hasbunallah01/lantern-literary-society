@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
@@ -8,7 +9,7 @@ import { hero } from "@/data/home";
 export function Hero() {
   return (
     <section className="bg-ivory px-6 pb-16 pt-12 md:px-10 md:pb-24 md:pt-20">
-      <div className="container-wide grid items-center gap-12 md:grid-cols-1">
+      <div className="container-wide grid items-center gap-10 sm:grid-cols-[1.25fr_1fr] sm:gap-6">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -57,6 +58,21 @@ export function Hero() {
             </a>
           </motion.div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className="mx-auto w-full max-w-[220px] sm:max-w-[340px] md:max-w-[420px]"
+        >
+          <Image
+            src="/lantern-logo.png"
+            alt="The Lantern Literary Society lantern and open book"
+            width={512}
+            height={512}
+            priority
+            className="h-auto w-full"
+          />
+        </motion.div>
       </div>
     </section>
   );
