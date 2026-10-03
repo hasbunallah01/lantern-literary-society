@@ -14,13 +14,13 @@ const socialLinks = [
     icon: Facebook,
     label: "Facebook",
     handle: "@thebookcrew",
-    href: "https://www.facebook.com/share/14rCbSagtT9/",
+    href: "https://www.facebook.com/share/19eVypEHkd/",
   },
   {
     icon: Mail,
     label: "Email",
-    handle: "hello@thebookcrew.online",
-    href: "mailto:hello@thebookcrew.online",
+    handle: "hello@lanternliterarysociety.haybee.xyz",
+    href: "mailto:hello@lanternliterarysociety.haybee.xyz",
   },
 ];
 

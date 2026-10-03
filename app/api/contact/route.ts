@@ -11,7 +11,7 @@ const schema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
-const FROM_ADDRESS = "The Lantern Literary Society <noreply@thebookcrew.online>";
+const FROM_ADDRESS = "The Lantern Literary Society <hello@lanternliterarysociety.haybee.xyz>";
 const TO_ADDRESS = "the.book.crew.community@gmail.com";
 
 export async function POST(request: Request) {

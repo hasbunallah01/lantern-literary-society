@@ -9,12 +9,12 @@ export const site = {
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
     "https://lantern-literary-society.vercel.app",
-  email: "contact@lanternliterarysociety.com",
+  email: "hello@lanternliterarysociety.haybee.xyz",
   phone: "",
   address: "",
   hours: "Mon – Fri · 9:00 – 18:00 (UTC)",
   socials: {
-    facebook: "https://www.facebook.com/share/1GsyPS2jso/",
+    facebook: "https://www.facebook.com/share/19eVypEHkd/",
     youtube: "https://youtube.com/@thebookcrew",
   },
   nav: [

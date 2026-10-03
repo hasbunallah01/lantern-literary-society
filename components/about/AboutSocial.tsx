@@ -23,7 +23,7 @@ export function AboutSocial() {
         {/* Social icon row */}
         <div className="mt-10 flex items-center justify-center gap-4">
           <a
-            href="https://www.facebook.com/share/14rCbSagtT9/"
+            href="https://www.facebook.com/share/19eVypEHkd/"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="Facebook"
@@ -32,7 +32,7 @@ export function AboutSocial() {
             <Facebook className="h-5 w-5" />
           </a>
           <a
-            href="mailto:hello@thebookcrew.online"
+            href="mailto:hello@lanternliterarysociety.haybee.xyz"
             aria-label="Email"
             className="grid h-12 w-12 place-items-center rounded-full border border-bronze/30 bg-bronze/5 text-bronze transition hover:border-bronze hover:bg-bronze/10 hover:text-bronze-700"
           >
@@ -47,10 +47,10 @@ export function AboutSocial() {
               Email
             </span>
             <a
-              href="mailto:hello@thebookcrew.online"
+              href="mailto:hello@lanternliterarysociety.haybee.xyz"
               className="break-all text-sm font-medium text-charcoal transition-colors hover:text-bronze"
             >
-              hello@thebookcrew.online
+              hello@lanternliterarysociety.haybee.xyz
             </a>
           </li>
           <li className="card-light flex flex-col items-center gap-1 p-5 text-center">
@@ -58,10 +58,10 @@ export function AboutSocial() {
               Press
             </span>
             <a
-              href="mailto:press@thebookcrew.online"
+              href="mailto:hello@lanternliterarysociety.haybee.xyz"
               className="break-all text-sm font-medium text-charcoal transition-colors hover:text-bronze"
             >
-              press@thebookcrew.online
+              hello@lanternliterarysociety.haybee.xyz
             </a>
           </li>
           <li className="card-light flex flex-col items-center gap-1 p-5 text-center">
@@ -69,10 +69,10 @@ export function AboutSocial() {
               Contact
             </span>
             <a
-              href="mailto:contact@thebookcrew.online"
+              href="mailto:hello@lanternliterarysociety.haybee.xyz"
               className="break-all text-sm font-medium text-charcoal transition-colors hover:text-bronze"
             >
-              contact@thebookcrew.online
+              hello@lanternliterarysociety.haybee.xyz
             </a>
           </li>
         </ul>
