@@ -87,13 +87,12 @@ export async function renderShareJpeg(c: Card) {
  */
 async function brandOverlay() {
   const logo = await img("/lantern-logo.png", 96, 96);
-  const o = "-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000, 2px 0 0 #000, 0 0 8px #000";
   const res = new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "flex-end", padding: "0 0 12px 18px" }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "flex-end", justifyContent: "center", paddingBottom: 38 }}>
         <div style={{ display: "flex", alignItems: "center" }}>
-          {logo && <img src={logo} width={40} height={40} style={{ borderRadius: 20, border: "2px solid #000", marginRight: 12 }} />}
-          <div style={{ display: "flex", fontSize: 17, fontWeight: 700, letterSpacing: 2.5, textTransform: "uppercase", color: "#fff", textShadow: o }}>The Lantern Literary Society</div>
+          {logo && <img src={logo} width={56} height={56} style={{ borderRadius: 28, marginRight: 16 }} />}
+          <div style={{ display: "flex", fontSize: 22, letterSpacing: 3, textTransform: "uppercase", color: "rgba(251,247,238,0.85)" }}>The Lantern Literary Society</div>
         </div>
       </div>
     ),
@@ -106,9 +105,19 @@ export async function renderBannerJpeg(src: string) {
   const buf = src.startsWith("http")
     ? Buffer.from(await (await fetch(src)).arrayBuffer())
     : await fs.readFile(path.join(process.cwd(), "public", src.replace(/^\//, "")));
-  const backdrop = await sharp(buf).resize(1200, 630, { fit: "cover" }).blur(30).modulate({ brightness: 0.65 }).toBuffer();
-  const banner = await sharp(buf).resize(1200, 630, { fit: "inside" }).toBuffer();
-  const jpg = await sharp(backdrop).composite([{ input: banner, gravity: "centre" }, { input: await brandOverlay(), top: 0, left: 0 }]).jpeg({ quality: 82, mozjpeg: true }).toBuffer();
+  // Facebook's post box center-crops previews to a square, so the whole banner is
+  // fitted inside the central 630px square (the blurred sides are expendable).
+  const backdrop = await sharp(buf).resize(1200, 630, { fit: "cover" }).blur(30).modulate({ brightness: 0.7 }).toBuffer();
+  const tint = await sharp({ create: { width: 1200, height: 630, channels: 4, background: { r: 8, g: 33, b: 55, alpha: 0.62 } } }).png().toBuffer();
+  const banner = await sharp(buf).resize(630, 440, { fit: "inside" }).toBuffer({ resolveWithObject: true });
+  const jpg = await sharp(backdrop)
+    .composite([
+      { input: tint, top: 0, left: 0 },
+      { input: banner.data, left: Math.round((1200 - banner.info.width) / 2), top: 40 },
+      { input: await brandOverlay(), top: 0, left: 0 },
+    ])
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toBuffer();
   return new Response(new Uint8Array(jpg), {
     headers: { "Content-Type": "image/jpeg", "Cache-Control": "public, max-age=31536000, immutable" },
   });
