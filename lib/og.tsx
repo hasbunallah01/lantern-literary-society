@@ -80,3 +80,19 @@ export async function renderShareJpeg(c: Card) {
     headers: { "Content-Type": "image/jpeg", "Cache-Control": "public, max-age=31536000, immutable" },
   });
 }
+
+/**
+ * Spotlight banner as the share image: the full banner, uncropped, centered on a
+ * blurred copy of itself so it fills Facebook's 1.91:1 frame (1200x630).
+ */
+export async function renderBannerJpeg(src: string) {
+  const buf = src.startsWith("http")
+    ? Buffer.from(await (await fetch(src)).arrayBuffer())
+    : await fs.readFile(path.join(process.cwd(), "public", src.replace(/^\//, "")));
+  const backdrop = await sharp(buf).resize(1200, 630, { fit: "cover" }).blur(30).modulate({ brightness: 0.65 }).toBuffer();
+  const banner = await sharp(buf).resize(1200, 630, { fit: "inside" }).toBuffer();
+  const jpg = await sharp(backdrop).composite([{ input: banner, gravity: "centre" }]).jpeg({ quality: 82, mozjpeg: true }).toBuffer();
+  return new Response(new Uint8Array(jpg), {
+    headers: { "Content-Type": "image/jpeg", "Cache-Control": "public, max-age=31536000, immutable" },
+  });
+}
