@@ -1,6 +1,9 @@
 import { spotlights, type Spotlight } from "@/data/home";
 import { conversations, type Conversation } from "@/data/conversations";
 
+/** Bump when the share-image design changes: Facebook caches og:image by URL, separately from the page. */
+export const OG_VERSION = "20261004";
+
 export const slugify = (s: string) =>
   s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 

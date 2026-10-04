@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { conversations } from "@/data/conversations";
 import { ConversationCard } from "@/components/home/FeaturedConversation";
-import { excerpt, getConversation } from "@/lib/share";
+import { OG_VERSION, excerpt, getConversation } from "@/lib/share";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${c.authorName}: ${c.conversationTitle}`;
   const description = excerpt(c.conversationDescription, 200);
   const url = `/conversations/${c.id}`;
-  const images = [{ url: `/og/conversations/${c.id}.jpg`, width: 1200, height: 630, type: "image/jpeg", alt: `${c.authorName} — Live Conversation` }];
+  const images = [{ url: `/og/conversations/${c.id}.jpg?v=${OG_VERSION}`, width: 1200, height: 630, type: "image/jpeg", alt: `${c.authorName} — Live Conversation` }];
   return {
     title: { absolute: `${title} | The Lantern Literary Society` },
     description,

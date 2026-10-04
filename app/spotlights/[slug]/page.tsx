@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { spotlights } from "@/data/home";
 import { SpotlightProfile } from "@/components/spotlights/SpotlightProfiles";
-import { excerpt, getSpotlight, spotlightSlug } from "@/lib/share";
+import { OG_VERSION, excerpt, getSpotlight, spotlightSlug } from "@/lib/share";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${item.authorName}: ${item.bookTitle} | Featured Spotlight`;
   const description = excerpt(item.description, 200);
   const url = `/spotlights/${spotlightSlug(item)}`;
-  const images = [{ url: `/og/spotlights/${spotlightSlug(item)}.jpg`, width: 1200, height: 630, type: "image/jpeg", alt: `${item.authorName} — Featured Spotlight` }];
+  const images = [{ url: `/og/spotlights/${spotlightSlug(item)}.jpg?v=${OG_VERSION}`, width: 1200, height: 630, type: "image/jpeg", alt: `${item.authorName} — Featured Spotlight` }];
   return {
     title: { absolute: `${title} | The Lantern Literary Society` },
     description,
